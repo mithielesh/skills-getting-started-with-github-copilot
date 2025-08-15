@@ -27,6 +27,24 @@ document.addEventListener("DOMContentLoaded", () => {
           <p><strong>Availability:</strong> ${spotsLeft} spots left</p>
         `;
 
+        // Add participants section
+        const participantsTemplate = document.getElementById("participants-template");
+        const participantsSection = participantsTemplate.content.cloneNode(true);
+        const participantsList = participantsSection.querySelector(".participants-list");
+        if (details.participants && details.participants.length > 0) {
+          details.participants.forEach(email => {
+            const li = document.createElement("li");
+            li.textContent = email;
+            participantsList.appendChild(li);
+          });
+        } else {
+          const li = document.createElement("li");
+          li.textContent = "No participants yet.";
+          li.style.fontStyle = "italic";
+          participantsList.appendChild(li);
+        }
+        activityCard.appendChild(participantsSection);
+
         activitiesList.appendChild(activityCard);
 
         // Add option to select dropdown
