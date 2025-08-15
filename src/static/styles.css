@@ -1,3 +1,27 @@
+/* Participants section styles */
+.participants-section {
+  margin-top: 1em;
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 0.75em 1em;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.participants-section h5 {
+  margin: 0 0 0.5em 0;
+  font-size: 1.05em;
+  color: #2d3a4a;
+  font-weight: 600;
+}
+.participants-list {
+  margin: 0;
+  padding-left: 1.2em;
+  color: #3a3a3a;
+  font-size: 0.98em;
+}
+.participants-list li {
+  margin-bottom: 0.2em;
+  list-style-type: disc;
+}
 * {
   box-sizing: border-box;
   margin: 0;
